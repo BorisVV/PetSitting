@@ -31,9 +31,10 @@ public class Pet {
         return address;
     }
 
-    public Pet setAddress(String address) {
+//Whatever calls this method has a reference to the Pet object you are calling it for, so you don't need to return the Pet object.
+    public void setAddress(String address) {
         this.address = address;
-        return this;
+
     }
 
     public String getDaysOfTheWeek() {
@@ -41,26 +42,28 @@ public class Pet {
         return daysOfTheWeek;
     }
 
-    public Pet setDaysOfTheWeek(String daysOfTheWeek) {
+//Same here
+    public void setDaysOfTheWeek(String daysOfTheWeek) {
         this.daysOfTheWeek = daysOfTheWeek;
         System.out.print(daysOfTheWeek);
-        return this;
+        
     }
 
     public String getNumOfTimes() {
         return numOfTimes;
     }
 
-    public Pet setNumOfTimes(String numOfTimes) {
+    public void setNumOfTimes(String numOfTimes) {
         this.numOfTimes = numOfTimes;
 
-        return this;
+        //return this; And here
     }
 
     public String getPetName() {
         return petName;
     }
 
+//TODO Change this one too and the setType method
     public Pet setPetName(String petName) {
         this.petName = petName;
         return this;
@@ -81,6 +84,7 @@ public class Pet {
     }
 
     //This method if to split and convert the getNumberOfTimes into integers and get the total of times the pets are visited.
+    
     public int splitNumOfTimes() {
         String spl = getNumOfTimes();
         String[] split = spl.split(" ");
@@ -98,7 +102,8 @@ public class Pet {
         }
     }
 
-    public static void main(String[] args) {
+//No main method needed, only in the class you'll start the program from.
+/*    public static void main(String[] args) {
         //Since I am not using this class, this is left blank. I actually could convert this class to an abstract type class.
-    }
+    }*/
 }
